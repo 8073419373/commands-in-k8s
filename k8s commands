@@ -1,0 +1,9 @@
+To get logs of pods
+
+kubectl -n event-orchestration get pods
+
+kubectl -n <namespace> logs pod/<pod-name> -c <container-name>
+
+kubectl -n event-orchestration logs pod/account-orchestration-6c8b56ffc8-8pvr9 -c account-orchestration | grep error --color
+
+kubectl -n event-orchestration logs pod/payee-orchestration-575dc94bbd-4xbjb -c payee-orchestration|grep error --color
